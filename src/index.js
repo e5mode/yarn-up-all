@@ -62,7 +62,7 @@ module.exports = {
                 const {workspace} = await Project.find(configuration, this.context.cwd);
 
                 const dependencies = getDependencies(workspace);
-                const descriptors = getDescriptors(dependencies, this.exclude.split(" "));
+                const descriptors = getDescriptors(dependencies, this.exclude ? this.exclude.split(" ") : null);
 
                 const packageNames = descriptors.map(e => {
                     return resolveFullPackageName(e[1].scope, e[1].name);
