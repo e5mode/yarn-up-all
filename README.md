@@ -1,8 +1,8 @@
 # yarn-up-all
 
+![GitHub package.json version](https://img.shields.io/github/package-json/v/e5mode/yarn-up-all)
 ![GitHub](https://img.shields.io/github/license/e5mode/yarn-up-all)
 ![GitHub Releases](https://img.shields.io/github/downloads/e5mode/yarn-up-all/1.0.1/total)
-![GitHub package.json version](https://img.shields.io/github/package-json/v/e5mode/yarn-up-all)
 
 ## Description
 
