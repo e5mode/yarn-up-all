@@ -16,7 +16,7 @@ yarn plugin import https://github.com/e5mode/yarn-up-all/releases/download/1.0.1
 
 ### Usage
 
-To update all plugins (including `devDependencies`), run:
+To update all depenencies (including `devDependencies`), run:
 
 ```Bash
 yarn up-all
