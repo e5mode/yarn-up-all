@@ -1,6 +1,6 @@
 {
   "name": "yarn-up-all",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Yarn2 plugin that will upgrade all dependencies to their latest version with one simple command",
   "main": "src/index.js",
   "repository": "https://github.com/e5mode/yarn-up-all.git",

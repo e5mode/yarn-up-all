@@ -83,11 +83,19 @@ module.exports = {
         UpAllCommand.usage = Command.Usage({
             description: 'Yarn2 plugin that will upgrade all dependencies to their latest version with one simple command',
             details: 'This command will upgrade all dependencies to their latest version',
-            examples: [[
-                'yarn up-all',
-                'yarn up-all --exclude react-dom',
-                'yarn up-all --exclude "react-dom react-router"'
-            ]],
+            examples: [
+                [
+                    `Upgrade all dependencies`,
+                    `yarn up-all`
+                ],
+                [
+                    `Upgrade all dependencies but exclude a single dependency`,
+                    `yarn up-all --exclude react-dom`
+                ],
+                [
+                    `Upgrade all dependencies but exclude multiple dependencies`,
+                    `yarn up-all --exclude "react-dom react-router"`
+                ]]
         });
 
         return {
