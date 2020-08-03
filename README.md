@@ -7,7 +7,7 @@ This is a Yarn2 (Berry) plugin that will update all dependencies of a project wi
 ### Installation
 
 ```Bash
-yarn plugin import https://raw.githubusercontent.com/e5mode/yarn-up-all/master/src/index.js
+yarn plugin import https://github.com/e5mode/yarn-up-all/releases/download/1.0.0/index.js
 ```
 
 ### Usage
