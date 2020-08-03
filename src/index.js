@@ -8,18 +8,6 @@ module.exports = {
         const Essentials = require('@yarnpkg/plugin-essentials');
 
         /**
-         * Retrieve dependencies and devDependencies
-         * @param workspace The current Workspace
-         * @returns {*[]} an array of dependencies
-         */
-        const getDependencies = (workspace) => {
-            const dependencies = workspace.manifest.dependencies;
-            const devDependencies = workspace.manifest.devDependencies;
-
-            return [...dependencies, ...devDependencies];
-        };
-
-        /**
          * Resolve the name of a package
          * @param scope The scope of the descriptor
          * @param name The name of the descriptor
@@ -61,7 +49,7 @@ module.exports = {
                 const configuration = await Configuration.find(this.context.cwd, this.context.plugins);
                 const {workspace} = await Project.find(configuration, this.context.cwd);
 
-                const dependencies = getDependencies(workspace);
+                const dependencies = [...workspace.manifest.dependencies, ...workspace.manifest.devDependencies];
                 const descriptors = getDescriptors(dependencies, this.exclude ? this.exclude.split(" ") : null);
 
                 const packageNames = descriptors.map(e => {
