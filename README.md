@@ -8,7 +8,21 @@
 
 This is a Yarn2 (Berry) plugin that will update all dependencies of a project with one simple command.
 
-### Installation
+## Scripts
+
+### `yarn build`
+
+Creates a minified version of the `yarn-up-all` plugin and places it in the `./build` folder.
+
+## Installation
+
+Make sure that you have Yarn2 installed before using this plugin. You can install Yarn2 by running the following command in your terminal:
+
+```Bash
+yarn set version berry
+```
+
+In order to install the plugin, you can run the following command in your terminal:
 
 ```Bash
 yarn plugin import https://github.com/e5mode/yarn-up-all/releases/download/1.0.1/index.js
