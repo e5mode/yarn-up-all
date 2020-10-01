@@ -17,10 +17,10 @@
   },
   "devDependencies": {
     "babel-minify": "^0.5.1",
-    "clipanion": "^2.5.0",
-    "eslint": "^7.8.1",
+    "clipanion": "^2.6.2",
+    "eslint": "^7.10.0",
     "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-import": "^2.22.1",
     "yup": "^0.29.3"
   }
 }
