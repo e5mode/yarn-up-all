@@ -11,16 +11,16 @@
     "build": "minify src -d build"
   },
   "dependencies": {
-    "@yarnpkg/cli": "^2.2.2",
-    "@yarnpkg/core": "^2.2.2",
-    "@yarnpkg/plugin-essentials": "^2.2.0"
+    "@yarnpkg/cli": "^2.4.0",
+    "@yarnpkg/core": "^2.4.0",
+    "@yarnpkg/plugin-essentials": "^2.4.0"
   },
   "devDependencies": {
     "babel-minify": "^0.5.1",
     "clipanion": "^2.6.2",
-    "eslint": "^7.10.0",
-    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
-    "yup": "^0.29.3"
+    "yup": "^0.31.1"
   }
 }
