@@ -18,9 +18,9 @@
   "devDependencies": {
     "babel-minify": "^0.5.1",
     "clipanion": "^2.6.2",
-    "eslint": "^7.14.0",
+    "eslint": "^7.17.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
-    "yup": "^0.31.1"
+    "yup": "^0.32.8"
   }
 }
