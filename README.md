@@ -6,7 +6,7 @@
 
 ## Description
 
-This is a Yarn2 (Berry) plugin that will update all dependencies of a project with one simple command.
+This is a Yarn 2 (berry) plugin that will update all dependencies of a project with one simple command.
 
 ## Scripts
 
@@ -16,7 +16,7 @@ Creates a minified version of the `yarn-up-all` plugin and places it in the `./b
 
 ## Installation
 
-Make sure that you have Yarn2 installed before using this plugin. You can install Yarn2 by running the following command in your terminal:
+Make sure that you have Yarn 2 installed before using this plugin. You can install Yarn 2 by running the following command in your terminal:
 
 ```Bash
 yarn set version berry
