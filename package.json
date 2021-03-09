@@ -1,7 +1,7 @@
 {
   "name": "yarn-up-all",
-  "version": "1.0.3",
-  "description": "Yarn2 plugin that will upgrade all dependencies to their latest version with one simple command",
+  "version": "1.0.4",
+  "description": "Yarn 2 plugin that will upgrade all dependencies to their latest version with one simple command",
   "main": "src/index.js",
   "repository": "https://github.com/e5mode/yarn-up-all.git",
   "author": "CodeDead",
@@ -11,16 +11,16 @@
     "build": "minify src -d build"
   },
   "dependencies": {
-    "@yarnpkg/cli": "^2.4.0",
+    "@yarnpkg/cli": "^2.4.1",
     "@yarnpkg/core": "^2.4.0",
     "@yarnpkg/plugin-essentials": "^2.4.0"
   },
   "devDependencies": {
     "babel-minify": "^0.5.1",
-    "clipanion": "^2.6.2",
-    "eslint": "^7.14.0",
+    "clipanion": "^3.0.0-rc.10",
+    "eslint": "^7.21.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
-    "yup": "^0.31.1"
+    "yup": "^0.32.9"
   }
 }

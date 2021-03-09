@@ -35,7 +35,6 @@ module.exports = {
     };
 
     class UpAllCommand extends Command {
-
       /**
        * Execute the command
        * @returns {Promise<void>}
@@ -70,7 +69,7 @@ module.exports = {
     });
 
     UpAllCommand.usage = Command.Usage({
-      description: 'Yarn2 plugin that will upgrade all dependencies to their latest version with one simple command',
+      description: 'Yarn 2 plugin that will upgrade all dependencies to their latest version with one simple command',
       details: 'This command will upgrade all dependencies to their latest version',
       examples: [
         [
@@ -79,11 +78,11 @@ module.exports = {
         ],
         [
           'Upgrade all dependencies but exclude a single dependency',
-          'yarn up-all --exclude react-dom',
+          'yarn up-all --exclude package',
         ],
         [
           'Upgrade all dependencies but exclude multiple dependencies',
-          'yarn up-all --exclude "react-dom react-router"',
+          'yarn up-all --exclude "package1 package2"',
         ]],
     });
 
