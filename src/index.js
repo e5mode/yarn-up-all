@@ -2,11 +2,9 @@ module.exports = {
   name: 'yarn-up-all-plugin',
   factory: (require) => {
     const { Configuration, Project } = require('@yarnpkg/core');
-    // eslint-disable-next-line import/no-extraneous-dependencies
-    const { Cli, Command } = require('clipanion');
-    // eslint-disable-next-line import/no-extraneous-dependencies
-    const yup = require('yup');
+    const { Cli, Command, Option } = require('clipanion');
     const Essentials = require('@yarnpkg/plugin-essentials');
+    const typanion = require('typanion');
 
     /**
     * Resolve the name of a package
@@ -53,7 +51,6 @@ module.exports = {
         ];
 
         const descriptors = getDescriptors(dependencies, this.exclude ? this.exclude.split(' ') : null);
-
         const packageNames = descriptors.map((e) => resolveFullPackageName(e[1].scope, e[1].name));
 
         const cli = Cli.from(Essentials.default.commands);
@@ -61,14 +58,10 @@ module.exports = {
       }
     }
 
-    UpAllCommand.addOption('exclude', Command.String('--exclude'));
-    UpAllCommand.addPath('up-all');
+    UpAllCommand.exclude = Option.String('--exclude', { validator: typanion.isString() });
+    UpAllCommand.paths = [['up-all']];
 
-    UpAllCommand.schema = yup.object().shape({
-      exclude: yup.string(),
-    });
-
-    UpAllCommand.usage = Command.Usage({
+    UpAllCommand.usage = {
       description: 'Yarn 2 plugin that will upgrade all dependencies to their latest version with one simple command',
       details: 'This command will upgrade all dependencies to their latest version',
       examples: [
@@ -84,7 +77,7 @@ module.exports = {
           'Upgrade all dependencies but exclude multiple dependencies',
           'yarn up-all --exclude "package1 package2"',
         ]],
-    });
+    };
 
     return {
       commands: [
