@@ -2,7 +2,7 @@
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/e5mode/yarn-up-all)
 ![GitHub](https://img.shields.io/github/license/e5mode/yarn-up-all)
-![GitHub Releases](https://img.shields.io/github/downloads/e5mode/yarn-up-all/1.0.5/total)
+![GitHub Releases](https://img.shields.io/github/downloads/e5mode/yarn-up-all/1.1.0/total)
 
 ## Description
 
@@ -25,7 +25,7 @@ yarn set version berry
 In order to install the plugin, you can run the following command in your terminal:
 
 ```Bash
-yarn plugin import https://github.com/e5mode/yarn-up-all/releases/download/1.0.5/index.js
+yarn plugin import https://github.com/e5mode/yarn-up-all/releases/download/1.1.0/index.js
 ```
 
 ### Usage

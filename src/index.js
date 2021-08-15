@@ -1,6 +1,3 @@
-const { Option } = require('clipanion');
-const typanion = require('typanion');
-
 module.exports = {
   name: 'yarn-up-all-plugin',
   factory: (require) => {
