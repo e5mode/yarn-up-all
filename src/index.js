@@ -1,3 +1,6 @@
+const { Option } = require('clipanion');
+const typanion = require('typanion');
+
 module.exports = {
   name: 'yarn-up-all-plugin',
   factory: (require) => {
@@ -33,6 +36,11 @@ module.exports = {
     };
 
     class UpAllCommand extends Command {
+      constructor() {
+        super();
+        this.exclude = Option.String('-e,--exclude', { validator: typanion.isString() });
+      }
+
       /**
        * Execute the command
        * @returns {Promise<void>}
@@ -58,12 +66,11 @@ module.exports = {
       }
     }
 
-    UpAllCommand.exclude = Option.String('--exclude', { validator: typanion.isString() });
     UpAllCommand.paths = [['up-all']];
-
     UpAllCommand.usage = {
+      category: 'Utilities',
       description: 'Yarn 2 plugin that will upgrade all dependencies to their latest version with one simple command',
-      details: 'This command will upgrade all dependencies to their latest version',
+      details: 'This command will upgrade all dependencies to their latest version. You can exclude certain dependencies from being upgraded by using the `-e,--exclude` option.',
       examples: [
         [
           'Upgrade all dependencies',
@@ -72,6 +79,10 @@ module.exports = {
         [
           'Upgrade all dependencies but exclude a single dependency',
           'yarn up-all --exclude package',
+        ],
+        [
+          'Upgrade all dependencies but exclude a single dependency',
+          'yarn up-all -e package',
         ],
         [
           'Upgrade all dependencies but exclude multiple dependencies',

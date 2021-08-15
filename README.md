@@ -41,7 +41,19 @@ To exclude a single dependency, run:
 yarn up-all --exclude package
 ```
 
+Alternatively, you can use the shorter command:
+```Bash
+yarn up-all -e package
+```
+
 To exclude multiple dependencies:
 ```Bash
 yarn up-all --exclude "package1 package2"
 ```
+
+### Options
+
+| Option      | Description                                      |
+|-------------|--------------------------------------------------|
+| `--exclude` | Exclude one or more packages from being upgraded |
+| `-e`        | Shorthand version of `--exclude`                 |
